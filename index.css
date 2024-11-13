@@ -1,0 +1,152 @@
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+body {
+    transition: background-color 0.5s ease;
+}
+
+#moodContainer {
+    animation: fadeIn 1s ease-in;
+}
+
+.card {
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.btn {
+    transition: all 0.2s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+.progress {
+    height: 5px;
+    background-color: #e9ecef;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    background-color: #0d6efd;
+    transition: width 0.4s ease;
+}
+
+#playlistItems li {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    transition: background-color 0.2s, transform 0.2s;
+}
+
+#playlistItems li:hover {
+    background-color: #e9ecef;
+    transform: translateY(-2px);
+}
+
+#playlistItems .btn-outline-primary {
+    color: #0d6efd;
+}
+
+#playlistItems .btn-outline-primary:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+#playlistItems .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    color: white;
+}
+
+#nowPlayingSong {
+    font-size: 1.2em;
+    color: #0d6efd;
+    font-weight: bold;
+}
+
+#playPauseBtn:hover, #skipBtn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+#playPauseBtn i {
+    transition: transform 0.2s ease;
+}
+
+#playPauseBtn:active i {
+    transform: scale(0.9);
+}
+
+#playPauseBtn:hover {
+    background-color: #0d6efd;
+    color: white;
+}
+
+body.happy {
+    background-color: #fdfd96;
+    color: #333;
+}
+
+body.sad {
+    background-color: #4a6572;
+    color: #e0f7fa;
+}
+
+body.energetic {
+    background-color: #ff6347;
+    color: #fff;
+}
+
+body.relaxed {
+    background-color: #98fb98;
+    color: #333;
+}
+
+@media (prefers-contrast: high) {
+    body {
+        background-color: #000 !important;
+        color: #fff !important;
+    }
+    .card, .list-group-item {
+        background-color: #333 !important;
+        color: #fff !important;
+    }
+    .btn {
+        border-color: #fff !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .card {
+        width: 90% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .card {
+        width: 100% !important;
+    }
+    #playlistItems li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    #playlistItems .btn {
+        margin-top: 5px;
+    }
+    .progress {
+        width: 100% !important;
+    }
+}
+
+.btn:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.25rem rgba(0,123,255,.25);
+    outline: none;
+}
